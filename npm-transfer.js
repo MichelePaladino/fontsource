@@ -1,0 +1,16 @@
+const shell = require("shelljs")
+const { readdirSync } = require("fs")
+const _ = require("lodash")
+
+const transfer = package => {
+  shell.exec(`npm access grant read-write typefaces ${package}`)
+}
+
+const getDirectories = source =>
+  readdirSync(source, { withFileTypes: true })
+    .filter(dirent => dirent.isDirectory())
+    .map(dirent => dirent.name)
+
+getDirectories("./scripts").forEach(dir => {
+  transfer(`typeface-${dir}`)
+})
