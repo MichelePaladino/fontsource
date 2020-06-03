@@ -1,6 +1,5 @@
 const shell = require("shelljs")
 const { readdirSync } = require("fs")
-const _ = require("lodash")
 
 const transfer = package => {
   shell.exec(`npm access grant read-write typefaces ${package}`)
