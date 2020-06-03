@@ -2,7 +2,7 @@ const shell = require("shelljs")
 const { readdirSync } = require("fs")
 
 const transfer = package => {
-  shell.exec(`npm access grant read-write typefaces ${package}`)
+  shell.exec(`npm access grant read-write Typefaces ${package}`)
 }
 
 const getDirectories = source =>
