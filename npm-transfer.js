@@ -1,3 +1,5 @@
+// Chuck this file into the root of your local Typefaces repo.
+
 const shell = require("shelljs")
 const { readdirSync } = require("fs")
 
