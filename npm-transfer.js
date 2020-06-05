@@ -13,6 +13,6 @@ const getDirectories = source =>
     .filter(dirent => dirent.isDirectory())
     .map(dirent => dirent.name)
 
-getDirectories("./scripts").forEach(dir => {
+getDirectories("./packages").forEach(dir => {
   transfer(`typeface-${dir}`)
 })
